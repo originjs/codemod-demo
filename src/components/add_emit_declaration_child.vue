@@ -13,10 +13,13 @@
 
 <script>
 export default {
+  emits: ["increment", "decrement"],
   name: "add_emit_declaration_child",
+
   props:[
       'text'
   ],
+
   methods:{
     add:function (){
       this.$emit('increment')
@@ -25,7 +28,7 @@ export default {
       this.$emit('decrement')
     }
   }
-}
+};
 </script>
 
 <style scoped>

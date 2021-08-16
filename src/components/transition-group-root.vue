@@ -19,7 +19,7 @@
         </li>
       </transition-group>
       <h3> tag is "span": </h3>
-      <transition-group>
+      <transition-group tag="span">
       <span v-for="item in items" :key="item" class="list-item">
         {{ item }}
       </span>

@@ -12,16 +12,16 @@
       <p>The contents below should remain unchanged after transformation.</p>
     </div>
     <div title="The contents below should remain unchanged after transformation.">
-      <template v-for="item in items">
+      <template v-for="item in items" :key="'bodying-id' + item.game.id + 'bodying-name'">
         <li
-            :key="'bodying-id' + item.game.id + 'bodying-name'"
+            
             role="presentation"
         >
           Game Id: {{item.game.id}}
         </li>
         <div>
           <li
-              :key="'bottom-' + item.id"
+              
               role="presentation"
           >
             Game Name: {{item.game.name}}

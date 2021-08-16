@@ -42,10 +42,10 @@ export default {
   },
   methods: {
     set() {
-      this.$set(this.$data.msg, '2', ' from remove_set_and_delete')
+      this.$data.msg['2'] = ' from remove_set_and_delete'
     },
     del() {
-      this.$delete(this.$data.msg, '2')
+      delete this.$data.msg['2']
     }
   }
 }

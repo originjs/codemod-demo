@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-bind="$attrs" v-on="$listeners"> Click {{$attrs.id}} times</button>
+    <button v-bind="$attrs" > Click {{$attrs.id}} times</button>
   </div>
 </template>
 

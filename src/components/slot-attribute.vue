@@ -13,7 +13,7 @@
     </div>
     <div title="If the transformation fails, the content will be changed.">
       <base-layout class="slotAttr">
-        <p slot="title">title-content</p>
+        <template v-slot:title><p >title-content</p></template>
       </base-layout>
     </div>
   </div>

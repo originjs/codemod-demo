@@ -29,10 +29,10 @@ Vue<span class="token punctuation">.</span><span class="token function">nextTick
 </template>
 
 <script>
-import Vue from "vue";
 import store from "../store";
+import { nextTick } from "vue";
 
-Vue.nextTick(() => {
+nextTick(() => {
   store.state.message = "message from nextTick function"
 })
 export default {

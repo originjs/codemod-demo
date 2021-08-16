@@ -1,22 +1,14 @@
-import Vue from "vue";
+import * as Vue from "vue";
 import App from './App.vue'
-import VueCompositionApi from '@vue/composition-api'
 import router from './router'
 import "./components/button_counter"
 import store from "./store";
 
-Vue.use(VueCompositionApi)
-Vue.config.productionTip = false
-new Vue({
-    router,
-    store,
-    render: h => h(App),
-}).$mount('#app')
-
-
+import button_counter from "../src/components/button_counter/index.js";
+const app = Vue.createApp(App).use(button_counter).use(router).use(store);
 //used by new_directive_api
-Vue.directive('demo', {
-    bind: function (el, binding, vnode) {
+app.directive('demo', {
+    beforeMount: function (el, binding, vnode) {
         // var s=JSON.stringify()
         el.innerHTML = `
             <p>
@@ -34,5 +26,8 @@ Vue.directive('demo', {
     `
     }
 })
+
+
+app.mount("#app");
 
 

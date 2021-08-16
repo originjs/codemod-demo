@@ -13,7 +13,7 @@
     </div>
     <div title="The contents below should remain unchanged after transformation.">
       <todo-list :todos="todos">
-        <template slot-scope="slotProps">
+        <template v-slot="slotProps">
           <span v-if="slotProps.todo.isComplete">✓</span>
           <span>{{slotProps.todo.text}}</span>
         </template>

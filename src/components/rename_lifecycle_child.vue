@@ -8,10 +8,10 @@
 export default {
   name: "rename_lifecycle_child",
   props:['msg'],
-  destroyed() {
+  unmounted() {
     this.$parent.msg=this.$parent.msg+'--destroyed'
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.$parent.msg=this.$parent.msg+'--beforeDestroy'
   }
 }
