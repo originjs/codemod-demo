@@ -12,7 +12,7 @@
     <div title="The word would be 'NO' if the transformation fails">
       <p v-if="condition" key="yes"><strong>Yes</strong></p>
       <div v-else-if="condition1" key="no">No</div>
-      <div v-else key="no">No</div>
+      <div v-else>No</div>
     </div>
   </div>
 </template>
