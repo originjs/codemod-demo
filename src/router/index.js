@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import VueRouter from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import transformations from "@/views/transformations";
 import vueTransformation from '@/views/vue-transformation'
 import hello from "@/views/hello";
@@ -22,7 +21,6 @@ import slotDefault from  '@/components/slot-default';
 import RemoveVOnNative from "../components/remove-v-on-native";
 import RemoveListener from '../components/remove-listener.vue';
 
-Vue.use(VueRouter)
 const routes=[
     {
       path: '/',
@@ -147,9 +145,9 @@ const routes=[
     }
 ]
 
-const router=new VueRouter({
+const router=createRouter({
     routes,
-    mode:'history',
+    history: createWebHashHistory(),
 })
 
 export default router
