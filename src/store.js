@@ -1,7 +1,6 @@
-import Vuex from 'vuex'
-import Vue from "vue";
-Vue.use(Vuex)
-const store=new Vuex.Store({
+import { createStore } from 'vuex'
+
+const store= createStore({
     state(){
         return{
             message:'message from store.js'

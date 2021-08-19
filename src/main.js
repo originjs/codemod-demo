@@ -9,9 +9,9 @@ import { createApp } from 'vue';
 // Vue.config.productionTip = false
 const app = createApp({
     router,
-    store,
     render: h => h(App),
 })
+app.use(store)
 app.use(VueCompositionApi)
 app.use(ButtonCounter)
 
