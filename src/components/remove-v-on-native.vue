@@ -18,7 +18,7 @@
       </p>
     </div>
     <div>
-      <remove-v-on-native-child @click.native="clickHandler">The click event with .native</remove-v-on-native-child>
+      <remove-v-on-native-child @click="clickHandler">The click event with .native</remove-v-on-native-child>
       <remove-v-on-native-child @click="clickHandler">The click event without .native</remove-v-on-native-child>
       <remove-v-on-native-child @vclick="vClickHandler">The $emit event in child component</remove-v-on-native-child>
     </div>

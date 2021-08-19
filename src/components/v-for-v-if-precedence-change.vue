@@ -10,13 +10,12 @@
   <h2>Example</h2>
   <p>If the transformation fails, "Bell" would disappear.</p>
   <ul title="'Bell' would disappear if the transformation fails">
-    <li
-        v-for='user in users'
-        v-if='user.isActive'
-        :key='user.id'
-    >
+  <template v-for='user in users' :key='user.id'>
+    <li v-if='user.isActive'>
       {{user.name}}
     </li>
+  </template>
+    
   </ul>
 </div>
 </template>
