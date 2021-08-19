@@ -1,38 +1,42 @@
-import Vue from "vue";
+// import Vue from "vue";
 import App from './App.vue'
 import VueCompositionApi from '@vue/composition-api'
 import router from './router'
-import "./components/button_counter"
+import ButtonCounter from "./components/button_counter"
 import store from "./store";
+import { createApp } from 'vue';
 
-Vue.use(VueCompositionApi)
-Vue.config.productionTip = false
-new Vue({
+// Vue.config.productionTip = false
+const app = createApp({
     router,
     store,
     render: h => h(App),
-}).$mount('#app')
+})
+app.use(VueCompositionApi)
+app.use(ButtonCounter)
+
 
 
 //used by new_directive_api
-Vue.directive('demo', {
+app.directive('demo', {
     bind: function (el, binding, vnode) {
         // var s=JSON.stringify()
         el.innerHTML = `
-            <p>
-                value of the Custom Directives（like the test in the v-model:foo="test"）
-            </p>
-            <p>
-                value:${binding.value}
-            </p>
-            <p>
-                arguments of the Custom Directives（like the foo in the v-model:foo="test"）
-            </p>
-            <p>
-                argument:${binding.arg}
-            </p>
-    `
+        <p>
+        value of the Custom Directives（like the test in the v-model:foo="test"）
+        </p>
+        <p>
+        value:${binding.value}
+        </p>
+        <p>
+        arguments of the Custom Directives（like the foo in the v-model:foo="test"）
+        </p>
+        <p>
+        argument:${binding.arg}
+        </p>
+        `
     }
 })
 
+app.mount('#app')
 
