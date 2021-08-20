@@ -1,6 +1,5 @@
 // import Vue from "vue";
 import App from './App.vue'
-import VueCompositionApi from '@vue/composition-api'
 import router from './router'
 import ButtonCounter from "./components/button_counter"
 import store from "./store";
@@ -12,7 +11,6 @@ const app = createApp({
 })
 app.use(router)
 app.use(store)
-app.use(VueCompositionApi)
 app.use(ButtonCounter)
 
 
