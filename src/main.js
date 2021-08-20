@@ -6,9 +6,7 @@ import store from "./store";
 import { createApp } from 'vue';
 
 // Vue.config.productionTip = false
-const app = createApp({
-    render: h => h(App),
-})
+const app = createApp(App)
 app.use(router)
 app.use(store)
 app.use(ButtonCounter)
