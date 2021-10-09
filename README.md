@@ -19,13 +19,15 @@ npm run build
 
 ## Codemod transformation
 ```
-npx [the path of vue-codemod] -a src
+npm install @originjs/vue-codemod -g
+npx vue-codemod -a src
 ```
 
 ## Project setup in Vue3
 
 ```
 npm install 
+npm run serve
 ```
 
 Just run 'npm install' again and you can run this project in vue3.
